@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Generic pool объектов и производные от него">
+    <Position X="5.362" Y="0.5" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Generic список звуков для объектов.">
+    <Position X="0.5" Y="6.15" Height="0.505" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Генераторы астероидов.">
+    <Position X="11.582" Y="4.667" Height="0.423" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Добавлен метод вычислени зоны игрового поля.">
+    <Position X="19.5" Y="7" Height="0.649" Width="1.842" />
+  </Comment>
+  <Comment CommentText="Отправляет взрыв в пулл, после того, как тот закончился">
+    <Position X="19" Y="5.5" Height="0.598" Width="2.75" />
+  </Comment>
+  <Comment CommentText="Главный класс игры.&#xD;&#xA;Следит за очками. Создаёт игрока и управляет созданием астероидов.">
+    <Position X="2" Y="9.25" Height="0.738" Width="2.703" />
+  </Comment>
+  <Comment CommentText="Возвращает объект на поле, если он вышел за границы.">
+    <Position X="19.469" Y="1.121" Height="0.489" Width="2.505" />
+  </Comment>
+  <Comment CommentText="Отвечает за мониторинг столкновений объекта.">
+    <Position X="19.628" Y="2.664" Height="0.551" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Интерфейс разрушения объекта&#xD;&#xA;">
+    <Position X="19.604" Y="4.121" Height="0.551" Width="1.7" />
+  </Comment>
+  <Class Name="Asteroid" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEABoAAAAAAAAAAAAEAAAAAEBABAAAAAgIAjCA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\Asteroid.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AsteroidPool" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AsteroidMotor" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAABBACAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\AsteroidMotor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Asteroid" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AsteroidSettings" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAIACACBCAIyBIAAUCAAAAAAAAAAFCAAAAAAAARA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\AsteroidSettigs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AsteroidGenerator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AsteroidGenerator&lt;T&gt;" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAAAEAAAAAAAAAAAAAQAAAAACAAEA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\Generators\AsteroidGenerator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IAsteroidGenerator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RandomPlacedAsteroidGenerator" Collapsed="true">
+    <Position X="9.75" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\Generators\RandomPlacedAsteroidGenerator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TimingAsteroidGenerator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SimpleAsteroidGenerator" Collapsed="true">
+    <Position X="12.75" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\Generators\SimpleAsteroidGenerator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TimingAsteroidGenerator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TimingAsteroidGenerator" Collapsed="true">
+    <Position X="11.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgAQAAAIAACAAAAAAAAAAAAAAgAAQAQAA=</HashCode>
+      <FileName>Assets\Scripts\Asteroids\Generators\TimingAsteroidGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExplosionController" Collapsed="true">
+    <Position X="19.25" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ExplosionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExplosionParticleSystem" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAACAAAAAAAAAAAAAAgAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ExplosionParticleSystem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExplosionParticleSystemPool" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CameraExtensions" Collapsed="true">
+    <Position X="19.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Extra\CameraExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameController" Collapsed="true">
+    <Position X="2.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgAQABCAAAgAAAAAICABAAIAAAAAJQAAAAAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\GameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ScoreUIController" />
+      <Property Name="HeathGridController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameData" Collapsed="true">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAASAAAAAAAQQAAAAAAAECAACAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HitPhysics" Collapsed="true">
+    <Position X="19.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HitPhysics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AsteroidPool" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pools\AsteroidPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletPool" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pools\BulletPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExplosionParticleSystemPool" Collapsed="true">
+    <Position X="2.25" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pools\ExplosionParticleSystemPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPool&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAQAAAABgAAAgAAAABAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Pools\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIHealthPool" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pools\UIHealthPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreenWrappingBehavior" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ScreenWrappingBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AsteroidSounds" Collapsed="true">
+    <Position X="1" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Sound\AsteroidSounds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShipSounds" Collapsed="true">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Sound\ShipSounds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAEAAAAAAAAAAAAgAAAAAAAAAQBAAAAAAIEA=</HashCode>
+      <FileName>Assets\Scripts\Sound\SoundManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundsList&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAIAAAAAAAAgAAAAAAAAAQBAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Sound\SoundsList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SoundManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bullet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAICAAAAgAAAAAAABAAAAEAAABACAAQAACAQ=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\Bullet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BulletPool" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShipInput" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIEQAAAAAAAAAAAAAAAAQAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\ShipInput.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Spaceship" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Spaceship" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgIAAAAAAgAAAAAAAAAAEAAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\Spaceship.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SpaceshipData" Collapsed="true">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAEAAAAAEAAAAAACAAEBQABAAA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\SpaceshipData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Spaceship" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GunInput" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAI=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\SpaceshipGun\GunInput.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SpaceshipGun" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShipGunData" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAAEEAAAACAAABAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\SpaceshipGun\ShipGunData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SpaceshipGun" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceshipGun" Collapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgBAIAAAAAAAAAAAAYAAAIAAAAAAAABAIAAEA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\SpaceshipGun\SpaceshipGun.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Spaceship" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceshipMotor" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABIIAAAAAAAAAAAAAEAAAAAAAAAAIBAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Spaceship\SpaceshipMotor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Spaceship" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeathGridController" Collapsed="true">
+    <Position X="5.25" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\HeathGridController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreUIController" Collapsed="true">
+    <Position X="5.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\ScoreUIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IAsteroidGenerator" Collapsed="true">
+    <Position X="14.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IAsteroidGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IDestructable" Collapsed="true">
+    <Position X="19.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IDestructable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IGunInput" Collapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IGunInput.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GunInput" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="IShipInput" Collapsed="true">
+    <Position X="12" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIAAAAAAAAAAIAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IShipInput.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ShipInput" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
