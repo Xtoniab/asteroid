@@ -8,6 +8,6 @@ public class SpaceshipGunInput : IGunInput
 
     public void ReadInput()
     {
-        _isFire = Input.GetButtonDown("Fire1");
+        _isFire = Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Space);
     }
 }

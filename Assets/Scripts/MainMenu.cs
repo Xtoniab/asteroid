@@ -64,12 +64,13 @@ public class MainMenu : MonoBehaviour
          Destroy(child.gameObject);
       }
 
-      RestApiClient.GetTop10Players(res =>
+      RestApiClient.GetTopPlayers(res =>
       {
-         foreach (var userData in res)
+         for (var i = 0; i < res.Length; i++)
          {
+            var userData = res[i];
             var tile = Instantiate(leaderTilePrefab, tileParent);
-            tile.Init(userData.username, userData.value);
+            tile.Init($"{i + 1}.{userData.username}", userData.value);
          }
       });
    }

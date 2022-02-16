@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EvilDroner
+  m_text: asfasfasfasfasfasfasfsaffasf
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f420f905f87c94b4c8215048f6e5cb5f, type: 2}
   m_sharedMaterial: {fileID: -2322644447950303659, guid: f420f905f87c94b4c8215048f6e5cb5f,
@@ -184,12 +184,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.1
+  m_fontSize: 15
   m_fontSizeBase: 22.1
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 27.4
   m_fontStyle: 32
   m_textAlignment: 513
   m_characterSpacing: -6
@@ -225,12 +225,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6989136319702046013}
-    characterCount: 10
+    characterCount: 28
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
