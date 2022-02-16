@@ -780,9 +780,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1131103141}
   - component: {fileID: 1131103140}
-  - component: {fileID: 1131103142}
   - component: {fileID: 1131103143}
   - component: {fileID: 1131103144}
+  - component: {fileID: 1131103142}
   - component: {fileID: 1131103145}
   m_Layer: 0
   m_Name: SoundManager
@@ -870,7 +870,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
