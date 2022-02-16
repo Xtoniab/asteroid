@@ -1,4 +1,5 @@
 ﻿using System;
+using DefaultNamespace;
 using Generators.Timing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -91,6 +92,7 @@ public class GameController : MonoBehaviour
     
     private void GameOver() // Обработка конца игры
     {
+        RestApiClient.SetHighestScore(PlayerPrefs.GetString("username"), _score);
         // TODO:: SEND SCORE
         SceneManager.LoadScene("Menu");
     }
