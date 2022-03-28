@@ -21,6 +21,7 @@ public class SpaceshipGun : MonoBehaviour
         bullet.transform.rotation = _barrel.transform.rotation;
         bullet.MaxLifeTime = _data.BulletLifeTime;
         bullet.Speed = _data.BulletSpeed;
+        bullet.gameObject.layer = LayerMask.NameToLayer("Spaceship");
         bullet.gameObject.SetActive(true);
 
         ShipSounds.Instance.PlaySound("Shot");
