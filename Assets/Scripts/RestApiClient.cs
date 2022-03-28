@@ -22,7 +22,7 @@ namespace DefaultNamespace
     public static class RestApiClient
     {
         private const string url = "ajasfj2japsjfjko";
-        private const string BasePath = "https://sarchuk.ru/api";
+        private const string BasePath = "https://xtoniab.com/api";
 
 
         static RestApiClient()
@@ -30,8 +30,8 @@ namespace DefaultNamespace
             RestClient.DefaultRequestHeaders["Access-Control-Allow-Origin"] = "*";
             RestClient.DefaultRequestHeaders["Access-Control-Allow-Methods"] = "DELETE, POST, GET, OPTIONS";
             RestClient.DefaultRequestHeaders["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Requested-With";
-            Debug.Log($"{CreateMD5("1234")}");
         }
+
         public static void GetTopPlayers(Action<UserData[]> callback){
       
             RestClient.GetArray<UserData>(BasePath + "/scores/highscores?limit=50").Then(res =>
@@ -55,12 +55,12 @@ namespace DefaultNamespace
         
         public static void SetHighestScore(string username, int score)
         {
-            var md5 = CreateMD5($"{username}{score}{url}");
+            var md5 = CreateMD5($"{username}_{score}_{url}");
            
             var currentRequest = new RequestHelper {
                 Params = new Dictionary<string, string>()
                 {
-                    ["hash"] = md5.ToLower()
+                    ["key"] = md5.ToLower()
                 },
                 Uri = BasePath + "/scores",
                 Body = new UserData {
