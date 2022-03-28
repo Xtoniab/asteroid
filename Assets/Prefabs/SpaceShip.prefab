@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5032372322852179533}
   - component: {fileID: 5032372322852179532}
   - component: {fileID: 5032372322852179520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpaceShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5032372324461491725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
