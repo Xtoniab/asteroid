@@ -42,6 +42,8 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("Main");
          }
       });
+      
+      nickTxt.onValidateInput += (text, index, addedChar) => text.Length < 12 ? addedChar : '\0';
    }
 
    private void Refresh()
