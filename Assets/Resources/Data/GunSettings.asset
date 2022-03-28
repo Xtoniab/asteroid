@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GunSettings
   m_EditorClassIdentifier: 
   _fireRate: 10
-  _bulletSpeed: 100
+  _bulletSpeed: 50
   _bulletLifeTime: 1.5
